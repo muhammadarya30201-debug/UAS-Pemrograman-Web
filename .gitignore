@@ -1,0 +1,9 @@
+# Abaikan file sensitif dan sampah
+tomcat-users.xml
+.vscode/
+*.class
+*.jar
+logs/
+work/
+temp/
+.metadata/

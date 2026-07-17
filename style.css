@@ -1,0 +1,22 @@
+/* style.css */
+body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; color: #333; margin: 0; padding: 20px; }
+
+.container { max-width: 950px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 0; }
+
+/* Styling Tabel */
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th { background-color: #3498db; color: white; padding: 12px; text-align: left; }
+td { border-bottom: 1px solid #ddd; padding: 12px; }
+tr:hover { background-color: #f9f9f9; }
+
+/* Styling Tombol */
+.btn { display: inline-block; padding: 8px 16px; background-color: #27ae60; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; margin-bottom: 10px; }
+.btn:hover { background-color: #219150; }
+
+.btn-edit { background-color: #f39c12; color: white; padding: 5px 10px; text-decoration: none; border-radius: 3px; font-size: 0.9em; }
+.btn-hapus { background-color: #e74c3c; color: white; padding: 5px 10px; text-decoration: none; border-radius: 3px; font-size: 0.9em; }
+
+/* Form Input */
+input, select { padding: 8px; width: 100%; max-width: 300px; border: 1px solid #ccc; border-radius: 4px; }

@@ -1,39 +1,44 @@
-# PerpustakaanWeb
+# 📚 Sistem Informasi Perpustakaan Web (UAS)
 
-Project UAS Pemrograman Web.
+Dokumentasi ini disusun untuk mempermudah proses evaluasi dan pengujian aplikasi **Perpustakaan Web**. Aplikasi ini dikembangkan sebagai pemenuhan tugas akhir (UAS) mata kuliah Pemrograman Web.
 
-## Cara Menjalankan:
-1. Pastikan Apache Tomcat 10 terinstall.
-2. Pastikan MySQL berjalan di port 3310.
-3. Import database `perpustakaan_db`.
-4. Copy folder project ke `webapps` Tomcat dan jalankan server.
+## 📝 Deskripsi Project
+Aplikasi ini adalah sistem manajemen perpustakaan berbasis web yang dibangun menggunakan **Java Server Pages (JSP)** dan **Apache Tomcat**. Fitur utama mencakup pengelolaan data buku, anggota, dan transaksi peminjaman buku.
 
-# Perpustakaan Web (UAS)
+## ✨ Fitur Utama
+- **Autentikasi User**: Sistem Login untuk membatasi akses (Admin/Petugas).
+- **Manajemen Buku (CRUD)**: Menambah, mengedit, dan menghapus data koleksi buku.
+- **Manajemen Anggota**: Pendataan anggota perpustakaan.
+- **Sistem Peminjaman**: Pencatatan transaksi peminjaman dan pengembalian.
 
-Aplikasi manajemen perpustakaan sederhana berbasis Java Server Pages (JSP) dan Apache Tomcat.
+## 🛠️ Stack Teknologi
+- **Bahasa**: Java (JSP)
+- **Web Server**: Apache Tomcat 10.x
+- **Database**: MySQL (MariaDB)
+- **IDE**: Apache NetBeans
+- **Library**: MySQL Connector/J
 
-## 🛠️ Prasyarat (Requirements)
-Sebelum menjalankan aplikasi, pastikan komputer Anda telah terinstall:
-- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/)
-- [Apache Tomcat 10](https://tomcat.apache.org/)
-- [XAMPP](https://www.apachefriends.org/index.html) (Untuk Database MySQL)
+## 🚀 Panduan Instalasi & Deployment
 
-## 🚀 Cara Menjalankan
+### Opsi 1: Menggunakan Apache NetBeans (Direkomendasikan)
+Cara ini paling efektif jika ingin melakukan pengujian atau modifikasi kode.
+1. **Import Project**: Buka NetBeans, pilih `File > Open Project`, lalu arahkan ke folder `PerpustakaanWeb`.
+2. **Server Configuration**: Pastikan Apache Tomcat 10 sudah terdaftar di NetBeans (`Tools > Servers`).
+3. **Run**: Klik kanan pada project, pilih `Run`. NetBeans akan otomatis mengompilasi dan menjalankan aplikasi di browser.
 
-1. **Clone Repository**
-   Buka terminal/command prompt dan ketik:
-   `git clone https://github.com/muhammadarya30201-debug/UAS-Pemrograman-Web.git`
+### Opsi 2: Deployment Manual (Tanpa IDE)
+Cara ini digunakan jika ingin menjalankan aplikasi langsung melalui server Tomcat.
+1. **Database**: Pastikan XAMPP berjalan, buka `localhost/phpmyadmin`, lalu import `perpustakaan_db.sql` ke database `perpustakaan_db`.
+2. **Copy Project**: Copy folder `PerpustakaanWeb` ke direktori `webapps` milik Tomcat (contoh: `C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\`).
+3. **Start Server**: Jalankan `startup.bat` pada folder `bin` direktori Tomcat.
+4. **Access**: Buka browser dan akses `http://localhost:8080/PerpustakaanWeb`.
 
-2. **Database Setup**
-   - Buka XAMPP Control Panel, jalankan **Apache** dan **MySQL**.
-   - Buka `localhost/phpmyadmin`.
-   - Buat database dengan nama `perpustakaan_db`.
-   - Import file `perpustakaan_db.sql` (jika ada) atau pastikan tabel sudah sesuai dengan koneksi di `koneksi.jsp`.
+## 🛠️ Troubleshooting & Tips
+Jika aplikasi tidak berjalan, periksa hal berikut:
 
-3. **Deploy ke Tomcat**
-   - Copy folder project `PerpustakaanWeb` ke dalam folder `webapps` di direktori instalasi Tomcat Anda.
-   - Contoh path: `C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\`
+*   **Masalah Koneksi Database**: Aplikasi ini dikonfigurasi menggunakan **MySQL Port 3310**. Jika Anda menggunakan port default (3306), silakan sesuaikan variabel port pada file `koneksi.jsp` di folder `WEB-INF`.
+*   **Database Error**: Pastikan nama database pada file `koneksi.jsp` sudah sesuai dengan nama database yang Anda import di phpMyAdmin (`perpustakaan_db`).
+*   **Library Missing**: Jika project tidak bisa di-build, pastikan file `mysql-connector-j-xxx.jar` sudah terpasang di folder `WEB-INF/lib`.
 
-4. **Jalankan Aplikasi**
-   - Buka folder `bin` di direktori Tomcat, jalankan `startup.bat`.
-   - Buka browser, akses alamat: `http://localhost:8080/PerpustakaanWeb`
+---
+*Dibuat oleh: [Nama Kamu] - [NIM Kamu]*
